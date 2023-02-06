@@ -154,7 +154,7 @@ class _CardInfoScreenState extends State<CardInfoScreen> {
                               Padding(
                                 padding: EdgeInsets.only(left: 15.0),
                                 child: Text(
-                                  "#Youru",
+                                  "#Yoru",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 18),
                                 ),
