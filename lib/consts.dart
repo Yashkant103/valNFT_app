@@ -9,6 +9,10 @@ const MEDIUMFONTSCOLOR = Color(0xFFf3f4f7);
 const SREACHNAVBK = Color(0xFF2c3240);
 const HOVERCOLOR = Color(0xFF233353);
 const TXTBKGCOLOR = Color(0xFF1b1e26);
+const APPBARGRADIENT_1 = Color(0xFF191c24);
+const APPBARGRADIENT_2 = Color(0xFF1b1e26);
+const APPBARGRADIENT_3 = Color(0xFF1b1e26);
+const APPBARGRADIENT_4 = Color(0xFF1a1d26);
 
 const LOGINSCREEN = TextStyle(
     fontSize: 20,

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class NftValSpash extends StatefulWidget {
-  const NftValSpash({super.key});
+class NftValSplash extends StatefulWidget {
+  const NftValSplash({super.key});
 
   @override
-  State<NftValSpash> createState() => _NftValSpashState();
+  State<NftValSplash> createState() => _NftValSplashState();
 }
 
-class _NftValSpashState extends State<NftValSpash> {
+class _NftValSplashState extends State<NftValSplash> {
   var screensize;
   @override
   Widget build(BuildContext context) {

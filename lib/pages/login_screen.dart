@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../cosnts.dart';
+import 'package:valNFT/pages/main_screen.dart';
+import '../consts.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -47,7 +48,13 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Container(
                             height: double.infinity,
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const MainScreen(),
+                                    ));
+                              },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: BUTTONCOLOR,
                               ),
@@ -81,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Text(
-                      "Already Have Account?",
+                      "Alredy Have Account?",
                       style: LOGINSCREEN_BOTTOM_TEXT,
                     ),
                     Text(
