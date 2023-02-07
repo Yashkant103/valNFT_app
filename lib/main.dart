@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:valNFT/pages/anim_ripple.dart';
-import 'package:valNFT/pages/splash_screen.dart';
 
 void main() => runApp(const MyApp());
 

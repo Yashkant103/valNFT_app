@@ -116,14 +116,18 @@ class _MainScreenState extends State<MainScreen> {
                                   child: Text(
                                     "Your Wallet",
                                     style: TextStyle(
-                                      color: SREACHNAVBK,
+                                      color: HOVERCOLOR,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                 ),
                                 Text(
-                                  "2391 vp",
-                                  style: TextStyle(color: Colors.white),
+                                  "2391 ",
+                                  style: TextStyle(color: Colors.white, fontSize: 10),
+                                ),
+                                Text(
+                                  "VP",
+                                  style: TextStyle(color: HOVERCOLOR),
                                 )
                               ],
                             )
