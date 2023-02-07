@@ -402,13 +402,13 @@ class _CardInfoScreenState extends State<CardInfoScreen> {
                               ),
                             ),
                           ), */
-                          MyDissmissibleWidget(screenSize: screenSize),
-                          MyDissmissibleWidget(screenSize: screenSize),
-                          MyDissmissibleWidget(screenSize: screenSize),
-                          MyDissmissibleWidget(screenSize: screenSize),
-                          MyDissmissibleWidget(screenSize: screenSize),
-                          MyDissmissibleWidget(screenSize: screenSize),
-                          MyDissmissibleWidget(screenSize: screenSize),
+                          myDissmissibleWidget(screenSize: screenSize),
+                          myDissmissibleWidget(screenSize: screenSize),
+                          myDissmissibleWidget(screenSize: screenSize),
+                          myDissmissibleWidget(screenSize: screenSize),
+                          myDissmissibleWidget(screenSize: screenSize),
+                          myDissmissibleWidget(screenSize: screenSize),
+                          myDissmissibleWidget(screenSize: screenSize),
                         ],
                       ),
                       Padding(
@@ -458,7 +458,7 @@ class _CardInfoScreenState extends State<CardInfoScreen> {
   }
 }
 
-Widget MyDissmissibleWidget({required var screenSize}) {
+Widget myDissmissibleWidget({required var screenSize}) {
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: Dismissible(

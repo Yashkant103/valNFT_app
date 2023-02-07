@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:valNFT/pages/login_screen.dart';
 
 class NftValSplash extends StatefulWidget {
   const NftValSplash({super.key});
@@ -12,6 +15,15 @@ class _NftValSplashState extends State<NftValSplash> {
   @override
   Widget build(BuildContext context) {
     screensize = MediaQuery.of(context).size;
+    Timer(
+      const Duration(seconds: 3),
+      () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const LoginScreen()),
+        );
+      },
+    );
     return Center(
       child: Stack(
           // fit: StackFit.expand,

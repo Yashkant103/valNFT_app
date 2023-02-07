@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './pages/login_screen.dart';
+import 'package:valNFT/pages/anim_ripple.dart';
+import 'package:valNFT/pages/splash_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: LoginScreen(),
+        body: AnimRipple(),
       ),
       debugShowCheckedModeBanner: false,
     );
