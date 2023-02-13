@@ -118,17 +118,18 @@ class _MainScreenState extends State<MainScreen> {
                                     style: TextStyle(
                                       color: HOVERCOLOR,
                                       fontWeight: FontWeight.bold,
+                                      fontSize: 12
                                     ),
                                   ),
                                 ),
                                 Text(
-                                  "2391 ",
+                                  "2391 VP",
                                   style: TextStyle(color: Colors.white, fontSize: 10),
                                 ),
-                                Text(
-                                  "VP",
-                                  style: TextStyle(color: HOVERCOLOR),
-                                )
+                                // Text(
+                                //   "VP",
+                                //   style: TextStyle(color: HOVERCOLOR),
+                                // )
                               ],
                             )
                           ],
@@ -214,11 +215,11 @@ class _MainScreenState extends State<MainScreen> {
                       child: BackdropFilter(
                         filter: ImageFilter.blur(sigmaX: 0.6, sigmaY: 0.6),
                         child: Container(
-                          height: 50,
+                          height: 30,
                           width: 200,
                           decoration: BoxDecoration(
                             color: Colors.white.withOpacity(0.3),
-                            borderRadius: BorderRadius.circular(15.0),
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -228,7 +229,7 @@ class _MainScreenState extends State<MainScreen> {
                                 style: TextStyle(color: Colors.white),
                               ),
                               Text(
-                                "${DateTime.now().hour} H :${DateTime.now().minute} M : ${DateTime.now().second} S",
+                                "${DateTime.now().hour} H :${DateTime.now().minute} M : ${DateTime.now().second}s ",
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,

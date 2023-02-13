@@ -54,21 +54,21 @@ class _CardInfoScreenState extends State<CardInfoScreen> {
                   BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 0.6, sigmaY: 0.6),
                     child: Container(
-                      height: 50,
+                      height: 30,
                       width: 200,
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.3),
-                        borderRadius: BorderRadius.circular(15.0),
+                        color: Colors.white.withOpacity(0.15),
+                        borderRadius: BorderRadius.circular(10.0),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           const Text(
-                            "Ends in",
-                            style: TextStyle(color: Colors.white),
+                            " Ends in",
+                            style: TextStyle(color: Colors.grey),
                           ),
                           Text(
-                            "${DateTime.now().hour} H :${DateTime.now().minute} M : ${DateTime.now().second} S",
+                            "${DateTime.now().hour} H :${DateTime.now().minute} M : ${DateTime.now().second} s ",
                             style: const TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -156,7 +156,7 @@ class _CardInfoScreenState extends State<CardInfoScreen> {
                                 child: Text(
                                   "#Yoru",
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 18),
+                                      color: Colors.grey, fontSize: 18),
                                 ),
                               ),
                             ],
@@ -175,7 +175,7 @@ class _CardInfoScreenState extends State<CardInfoScreen> {
                               icon: const Icon(
                                 Icons.favorite,
                                 color: Colors.red,
-                                size: 40,
+                                size: 30,
                               ),
                             ),
                           ),
@@ -205,7 +205,7 @@ class _CardInfoScreenState extends State<CardInfoScreen> {
                                       "Floor Price",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          color: MEDIUMFONTSCOLOR),
+                                          color: Colors.grey),
                                     ),
                                   ),
                                   RichText(
@@ -222,7 +222,7 @@ class _CardInfoScreenState extends State<CardInfoScreen> {
                                           text: "  VP",
                                           style: TextStyle(
                                             fontSize: 25,
-                                            color: MEDIUMFONTSCOLOR,
+                                            color: Colors.grey,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         )
@@ -253,7 +253,7 @@ class _CardInfoScreenState extends State<CardInfoScreen> {
                                       "Owner",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          color: MEDIUMFONTSCOLOR),
+                                          color: Colors.grey),
                                     ),
                                   ),
                                   RichText(
@@ -270,7 +270,7 @@ class _CardInfoScreenState extends State<CardInfoScreen> {
                                           text: "  Player",
                                           style: TextStyle(
                                             fontSize: 25,
-                                            color: MEDIUMFONTSCOLOR,
+                                            color: Colors.grey,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         )
@@ -287,7 +287,7 @@ class _CardInfoScreenState extends State<CardInfoScreen> {
                                 color: Colors.transparent,
                                 border: Border(
                                   right: BorderSide(
-                                    color: Colors.white.withOpacity(0.8),
+                                    color: Colors.grey.withOpacity(0.8),
                                     width: 2,
                                   ),
                                 ),
@@ -301,7 +301,7 @@ class _CardInfoScreenState extends State<CardInfoScreen> {
                                       "Role",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          color: MEDIUMFONTSCOLOR),
+                                          color: Colors.grey),
                                     ),
                                   ),
                                   Text(
@@ -327,17 +327,21 @@ class _CardInfoScreenState extends State<CardInfoScreen> {
                               children: [
                                 Expanded(
                                   flex: 2,
-                                  child: Container(
-                                    color: Colors.transparent,
-                                    child: const Text(
-                                      "Lorem IpiSOme",
-                                      style: TextStyle(color: Colors.white),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Container(
+                                      color: Colors.transparent,
+                                      child: const Text(
+                                        "Japanese native, Yoru rips holes straight through"
+                                            " reality to infiltrate enemy lines unseen. Using...",
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
                                     ),
                                   ),
                                 ),
                                 const Expanded(
                                   child: Text(
-                                    "Show More",
+                                    "  Read More",
                                     style: TextStyle(
                                         color: SHOWMOREFCOLOR,
                                         fontWeight: FontWeight.w600),
