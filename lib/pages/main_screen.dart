@@ -116,7 +116,7 @@ class _MainScreenState extends State<MainScreen> {
                                   child: Text(
                                     "Your Wallet",
                                     style: TextStyle(
-                                      color: HOVERCOLOR,
+                                      color: Colors.grey,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 12
                                     ),
@@ -280,7 +280,7 @@ class _MainScreenState extends State<MainScreen> {
                                           child: Text(
                                             "#YORU",
                                             style:
-                                                TextStyle(color: Colors.white),
+                                                TextStyle(color: Colors.grey),
                                           ),
                                         ),
                                       ],
@@ -295,7 +295,7 @@ class _MainScreenState extends State<MainScreen> {
                                           "Floor Price",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
-                                              color: MEDIUMFONTSCOLOR),
+                                              color: Colors.grey),
                                         ),
                                       ),
                                       RichText(
@@ -312,7 +312,7 @@ class _MainScreenState extends State<MainScreen> {
                                               text: "  VP",
                                               style: TextStyle(
                                                 fontSize: 25,
-                                                color: MEDIUMFONTSCOLOR,
+                                                color: Colors.grey,
                                                 fontWeight: FontWeight.bold,
                                               ),
                                             )
@@ -372,7 +372,7 @@ class _MainScreenState extends State<MainScreen> {
                         Icons.home,
                         color: Colors.red,
                       ),
-                      label: "Home"),
+                      label: "Home" ),
                   NavigationDestination(
                       icon: Icon(
                         Icons.explore_outlined,
