@@ -2,21 +2,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: DataFromApi(),
-    );
-  }
-}
-
 class DataFromApi extends StatefulWidget {
   const DataFromApi({super.key});
 
@@ -26,15 +11,15 @@ class DataFromApi extends StatefulWidget {
 
 class _DataFromApiState extends State<DataFromApi> {
   Future getUserData() async {
-    var response = await http.get(Uri.https('630c473353a833c53426bfc3.mockapi.io', 'try'));
-    print(response.body);
+    var response = await http.get(Uri.https('630c473353a833c53426bfc3.mockapi.io', 'valnft'));
+    // print(response.body);
     var jsonData = jsonDecode(response.body);
     List<User> users = [];
     for (var u in jsonData) {
-      User user = User(u["name"], u["about"], u["phoneNumber"]);
+      User user = User(u["name"], u["userName"], u["floorPrice"]);
       users.add(user);
     }
-    print(users.length);
+    // print(users.length);
     return users;
   }
 
@@ -43,22 +28,29 @@ class _DataFromApiState extends State<DataFromApi> {
     return Scaffold(
         appBar: AppBar(
           title: const Text('API Data'),
+          // centerTitle: API,
         ),
         body: FutureBuilder(
           future: getUserData(),
           builder: (context, snapshot) {
             if (snapshot.data == null) {
-              return const Center(
-                child: Text('Loading...'),
+              return const Scaffold(
+                backgroundColor: Colors.blueGrey,
+                body: Center(
+                    child: CircularProgressIndicator()
+                ),
               );
-            } else{
+            }
+            else{
               return ListView.builder(
                   itemCount: snapshot.data!.length,
                   itemBuilder: (context, i) {
-                    return ListTile(
-                        title: Text(snapshot.data[i].name),
-                        subtitle: Text(snapshot.data[i].about),
-                        trailing: Text(snapshot.data[i].phoneNumber));
+                    return Card(
+                      child: ListTile(
+                          title: Text(snapshot.data[i].name , style: TextStyle(fontSize: 20),),
+                          subtitle: Text(snapshot.data[i].userName, style: TextStyle(fontSize: 15),),
+                          trailing: Text(snapshot.data[i].floorPrice+" VP ", style: TextStyle(fontSize: 18),)),
+                    );
                   });
             }
           },
@@ -67,6 +59,6 @@ class _DataFromApiState extends State<DataFromApi> {
 }
 
 class User {
-  final String name, about, phoneNumber;
-  User(this.name, this.about, this.phoneNumber);
+  final String name, userName, floorPrice;
+  User(this.name, this.userName, this.floorPrice);
 }
